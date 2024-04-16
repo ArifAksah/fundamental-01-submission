@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="icon" href="#" sizes="512x512" />
+    <link rel="stylesheet" href="/src/styles/style.css" />
+</head>
+<body>
+    <header>
+        <note-app-bar></note-app-bar>
+    </header>
+
+    <main>
+        <div class="container">
+          <add-note></add-note>
+            <note-section-with-title id="notes" class="notes" title="Note List">
+                <div id="searchBarContainer" class="search-bar-container">
+                    <note-search-bar></note-search-bar>
+                </div>
+
+                <div id="noteListContainer" class="note-list-container">
+                    <note-query-waiting></note-query-waiting>
+                    <note-search-loading></note-search-loading>
+
+                    <note-list></note-list>
+                </div>
+            </note-section-with-title>
+        </div>
+    </main>
+
+    <footer>
+        <note-footer-bar></note-footer-bar>
+    </footer>
+
+    <script type="module" src="/src/app.js"></script>
+</body>
+</html>
